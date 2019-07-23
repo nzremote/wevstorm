@@ -5,17 +5,32 @@
     <title>"first 1"</title>
 </head>
 
-<script>
-    function app(){
-        alert("by")
+<!--<script>-->
+    <!--function app(){-->
+        <!--alert("by")-->
 
-    }
-    app()
-</script>
+    <!--}-->
+    <!--app()-->
+<!--</script>-->
 
 <body>
-    <h1>"text"</h1>
-    <div id = "div1">"hello world"</div>
+    <h1 id="intro">Hello everyone</h1>
+    <!--<div id = "div1">"hello world"</div>-->
+    <p>"What is your name ? " </p>
+<input tpye="text" id="name"><button id="buttonName">Set</button>
 </body>
+
+<script>
+    function app() {
+        function printMyName(e) {
+            let myName = document.getElementById("name").value;
+            document.getElementById("intro").innerHTML="hello  " + myName
+
+        }
+        document.getElementById("buttonName").onclick=printMyName;
+
+    }
+    window.onload=app;
+</script>
 
 </html>
