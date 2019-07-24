@@ -19,7 +19,13 @@
     <p>"What is your name ? " </p>
 <input tpye="text" id="name"><button id="buttonName">Set</button>
 </body>
-
+<canvas id="myCanvas"></canvas>
+<script type="text/javascript">
+    var canvas=document.getElementById('myCanvas');
+    var ctx=canvas.getContext('2d');
+    ctx.fillStyle='#FF0000';
+    ctx.fillRect(0,0,80,100);
+</script>
 <script>
     function app() {
         function printMyName(e) {
