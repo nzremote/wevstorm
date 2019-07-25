@@ -1,9 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <title>"first 1"</title>
+    <style type="text/css">
+        body
+        {
+            font-size:70%;
+            font-family:verdana,helvetica,arial,sans-serif;
+        }
+    </style>
+    <script type="text/javascript">
+        function cnvs_getCoordinates(e)
+        {
+            x=e.clientX;
+            y=e.clientY;
+            document.getElementById("xycoordinates").innerHTML="Coordinates: (" + x + "," + y + ")";
+        }
+        function cnvs_clearCoordinates()
+        {
+            document.getElementById("xycoordinates").innerHTML="";
+        }
+    </script>
 </head>
+
+<body style="margin:0px;">
+<p>把鼠标悬停在下面的矩形上可以看到坐标：</p>
+<div id="coordiv" style="float:left;width:199px;height:99px;border:1px solid #c3c3c3"
+     onmousemove="cnvs_getCoordinates(event)"
+     onmouseout="cnvs_clearCoordinates()"></div>
+<br />
+<br />
+<br />
+<div id="xycoordinates"></div>
+</body>
+
+
 
 <!--<script>-->
     <!--function app(){-->
@@ -13,49 +46,48 @@
     <!--app()-->
 <!--</script>-->
 
-<body>
 
-<video width="600" controls>
-    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/ogg" >
-    Your browser does not support HTML5 video.
-</video>
+<!--<video width="600" controls>-->
+    <!--<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">-->
+    <!--<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/ogg" >-->
+    <!--Your browser does not support HTML5 video.-->
+<!--</video>-->
     <!--<h1 id="intro">Hello everyone</h1>-->
     <!--&lt;!&ndash;<div id = "div1">"hello world"</div>&ndash;&gt;-->
     <!--<p>"What is your name ? " </p>-->
 <!--<input tpye="text" id="name"><button id="buttonName">Set</button>-->
-<br/>
+<!--<br/>-->
 
-<audio controls="controls">
-    <source src="https://www.w3schools.com/html/horse.ogg" >
-    Your browser does not support the audio tag.
-</audio>
+<!--<audio controls="controls">-->
+    <!--<source src="https://www.w3schools.com/html/horse.ogg" >-->
+    <!--Your browser does not support the audio tag.-->
+<!--</audio>-->
 
 
 
-<br/>
+<!--<br/>-->
 
-<canvas id="myCanvas"></canvas>
-
-</body>
 <!--<canvas id="myCanvas"></canvas>-->
-<script type="text/javascript">
-    var canvas=document.getElementById('myCanvas');
-    var ctx=canvas.getContext('2d');
-    ctx.fillStyle='#FF0000';
-    ctx.fillRect(100,100,80,100);
-</script>
-<script>
-    function app() {
-        function printMyName(e) {
-            let myName = document.getElementById("name").value;
-            document.getElementById("intro").innerHTML="hello  " + myName
 
-        }
-        document.getElementById("buttonName").onclick=printMyName;
+<!--</body>-->
+<!--&lt;!&ndash;<canvas id="myCanvas"></canvas>&ndash;&gt;-->
+<!--<script type="text/javascript">-->
+    <!--var canvas=document.getElementById('myCanvas');-->
+    <!--var ctx=canvas.getContext('2d');-->
+    <!--ctx.fillStyle='#FF0000';-->
+    <!--ctx.fillRect(100,100,80,100);-->
+<!--</script>-->
+<!--<script>-->
+    <!--function app() {-->
+        <!--function printMyName(e) {-->
+            <!--let myName = document.getElementById("name").value;-->
+            <!--document.getElementById("intro").innerHTML="hello  " + myName-->
 
-    }
-    window.onload=app;
-</script>
+        <!--}-->
+        <!--document.getElementById("buttonName").onclick=printMyName;-->
+
+    <!--}-->
+    <!--window.onload=app;-->
+<!--</script>-->
 
 </html>
