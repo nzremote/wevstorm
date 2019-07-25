@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+
 <!DOCTYPE HTML>
 <html>
 <body>
@@ -9,14 +8,15 @@
 <script type="text/javascript">
     var c=document.getElementById("myCanvas");
     var cxt=c.getContext("2d");
-    cxt.fillStyle="#FF0000";
-    cxt.beginPath();
-    cxt.arc(70,18,15,0,Math.PI*2,true);
-    cxt.closePath();
-    cxt.fill();
+    var grd=cxt.createLinearGradient(0,0,175,50);
+    grd.addColorStop(0,"#FF0000");
+    grd.addColorStop(1,"#00FF00");
+    cxt.fillStyle=grd;
+    cxt.fillRect(0,0,175,50);
 </script>
 </body>
 </html>
+
 <!--<body>-->
 <!--<canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">-->
     <!--Your browser does not support the canvas element.-->
