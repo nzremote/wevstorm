@@ -1,21 +1,70 @@
 
 <!DOCTYPE HTML>
 <html>
+
 <body>
-<canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
+<canvas id="myCanvas" width="600" height="300" style="border:1px solid #c3c3c3;">
     Your browser does not support the canvas element.
 </canvas>
+<!--<script type="text/javascript">-->
 <script type="text/javascript">
-    var c=document.getElementById("myCanvas");
-    var cxt=c.getContext("2d");
-    var grd=cxt.createLinearGradient(0,0,175,50);
-    grd.addColorStop(0,"#FF0000");
-    grd.addColorStop(1,"#00FF00");
-    cxt.fillStyle=grd;
-    cxt.fillRect(0,0,175,50);
+
+
+function setup() {
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+    let img=new Image();
+    img.onload = function() {
+        ctx.drawImage(img, 0, 0);
+    };
+
+    img.src= "pipe_image.png" ; //"/Users/jianchen/Downloads/pipe_image.png"; //"pipe_image.png" ;
+}
+
+window.onload = setup
+
+
+// let c=document.getElementById("myCanvas");
+// let cxt=c.getContext("2d");
+// let img=new Image();
+// img.src="pipe_image.png";
+// cxt.drawImage(img,0,0);
+//
+
+
+
+    // cxt.drawImage(img,0,0);
+    // img.onload = () => {
+    //     ctx.drawImage(img, 0, 0);
+    // };
+    // let qrLastSupper = document.createElement("img");
+    // qrLastSupper.src = "/Users/jianchen/Downloads/pipe_image.png";
+    // document.body.appendChild(qrLastSupper);
+
+
 </script>
+
 </body>
+
 </html>
+
+<!--<body>-->
+<!--<canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">-->
+    <!--Your browser does not support the canvas element.-->
+<!--</canvas>-->
+<!--<script type="text/javascript">-->
+    <!--var c=document.getElementById("myCanvas");-->
+    <!--var cxt=c.getContext("2d");-->
+    <!--var grd=cxt.createLinearGradient(0,0,175,50);-->
+    <!--grd.addColorStop(0,"#FF0000");-->
+    <!--grd.addColorStop(1,"#00FF00");-->
+    <!--cxt.fillStyle=grd;-->
+    <!--cxt.fillRect(0,0,175,50);-->
+<!--</script>-->
+<!--</body>-->
+
+
+<!--</html>-->
 
 <!--<body>-->
 <!--<canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">-->
@@ -123,4 +172,4 @@
     <!--window.onload=app;-->
 <!--</script>-->
 
-</html>
+<!--</html>-->
