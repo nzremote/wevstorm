@@ -1,20 +1,24 @@
-
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <body>
 
-<h2>What Can JavaScript Do?</h2>
+<h2>JavaScript Statements</h2>
 
-<p>JavaScript can change HTML attribute values.</p>
+<p>A <b>JavaScript program</b> is a list of <b>statements</b> to be executed by a computer.</p>
 
-<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+<p id="demo"></p>
 
-<button onclick="document.getElementById('myImage').src='pipe_image.png'">Turn on the light</button>
+<script>
+    var x, y, z;  // Statement 1
+    x = 5;    // Statement 2
+    y = 6;    // Statement 3
+    z = x + y;  // Statement 4
 
-<img id="myImage" src="flower.jpg" style="width:100px">
-
-<button onclick="document.getElementById('myImage').src='flower.jpg'">Turn off the light</button>
+    document.getElementById("demo").innerHTML =
+        "The value of z is " + z + ".";
+</script>
 
 </body>
-
 </html>
+
+
